@@ -20,8 +20,7 @@ function getScore(m_score1, m_score2) {
         }
     } else if (m_score1 >= 4 || m_score2 >= 4) {
         const diference = m_score1 - m_score2 > 0 ? m_score1 - m_score2 : m_score2 - m_score1;
-        if (diference === 1) {score = "Advantage player";}
-        else  {score = "Win for player";}
+        score = (diference === 1) ? "Advantage player" : "Win for player"
         score += m_score1 - m_score2 > 0 ? "1" : "2"
 
     } else {
