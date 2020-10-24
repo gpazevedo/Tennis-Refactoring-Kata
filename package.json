@@ -1,0 +1,23 @@
+{
+  "name": "js-pure",
+  "version": "1.0.0",
+  "description": "JS Refactoring",
+  "scripts": {
+    "old": "jest",
+    "test": "jest --config ./jest.config.json --watchAll"
+
+  },
+  "author": "Gustavo Peixoto de Azevedo",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "prettier": "^2.0.5",
+    "jest": "^26.4.2",
+    "jest-each": "^26.4.2"
+  }
+}
