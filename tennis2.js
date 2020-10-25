@@ -46,18 +46,9 @@ function getScore(P1point, P2point) {
     score = P1res + "-" + P2res;
   }
   if (P2point > P1point && P2point < 4) {
-    if (P2point === 2) {
-      P2res = "Thirty";
-    }
-    if (P2point === 3) {
-      P2res = "Forty";
-    }
-    if (P1point === 1) {
-      P1res = "Fifteen";
-    }
-    if (P1point === 2) {
-      P1res = "Thirty";
-    }
+    P1res = scoreName(P1point);
+    P2res = scoreName(P2point);
+
     score = P1res + "-" + P2res;
   }
 
