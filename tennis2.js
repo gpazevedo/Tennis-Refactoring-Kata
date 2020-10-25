@@ -22,14 +22,14 @@ function getScore(P1point, P2point) {
     return "Win for player" + (P1point - P2point > 0 ? "1" : "2");
   }
 
+  if (P1point >= 3 && P2point >= 3 && diference >= 1) {
+    return "Advantage player" + (P1point - P2point > 0 ? "1" : "2");
+  }
+
   if (diference === 0) {
     score = P1point < 3 ? scoreName(P1point) + "-All" : "Deuce";
   } else if (P1point < 4 || P2point < 4) {
     score = scoreName(P1point) + "-" + scoreName(P2point);
-  }
-
-  if (P1point >= 3 && P2point >= 3 && diference >= 1) {
-    score = "Advantage player" + (P1point - P2point > 0 ? "1" : "2");
   }
 
   return score;
