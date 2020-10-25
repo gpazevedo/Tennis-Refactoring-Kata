@@ -24,16 +24,6 @@ function getScore(P1point, P2point) {
 
   var P1res;
   var P2res;
-  if (P1point > 0 && P2point === 0) {
-    P1res = scoreName(P1point);
-    P2res = "Love";
-    score = P1res + "-" + P2res;
-  }
-  if (P2point > 0 && P1point === 0) {
-    P2res = scoreName(P2point);
-    P1res = "Love";
-    score = P1res + "-" + P2res;
-  }
 
   if (P1point > P2point && P1point < 4) {
     P1res = scoreName(P1point);
