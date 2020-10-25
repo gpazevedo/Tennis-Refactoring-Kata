@@ -15,6 +15,8 @@ function scoreName(points) {
 
 function getScore(P1point, P2point) {
   var score = "";
+  const diference =
+    P1point - P2point > 0 ? P1point - P2point : P2point - P1point;
 
   if (P1point === P2point && P1point < 3) {
     score = scoreName(P1point) + "-All";
@@ -23,9 +25,6 @@ function getScore(P1point, P2point) {
     score = "Deuce";
   }
 
-  // if (P1point === 0 || P2point === 0) {
-  //   score = scoreName(P1point) + "-" + scoreName(P2point);
-  // }
   var P1res;
   var P2res;
   if (P1point > 0 && P2point === 0) {
@@ -60,11 +59,8 @@ function getScore(P1point, P2point) {
     score = "Advantage player2";
   }
 
-  if (P1point >= 4 && P2point >= 0 && P1point - P2point >= 2) {
-    score = "Win for player1";
-  }
-  if (P2point >= 4 && P1point >= 0 && P2point - P1point >= 2) {
-    score = "Win for player2";
+  if ((P1point >= 4 || P2point >= 4) && diference >= 2) {
+    score = "Win for player" + (P1point - P2point > 0 ? "1" : "2");
   }
   return score;
 }
