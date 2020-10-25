@@ -23,19 +23,13 @@ function getScore(P1point, P2point) {
     score = "Deuce";
   }
 
+  // if (P1point === 0 || P2point === 0) {
+  //   score = scoreName(P1point) + "-" + scoreName(P2point);
+  // }
   var P1res;
   var P2res;
   if (P1point > 0 && P2point === 0) {
-    if (P1point === 1) {
-      P1res = "Fifteen";
-    }
-    if (P1point === 2) {
-      P1res = "Thirty";
-    }
-    if (P1point === 3) {
-      P1res = "Forty";
-    }
-
+    P1res = scoreName(P1point);
     P2res = "Love";
     score = P1res + "-" + P2res;
   }
