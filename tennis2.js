@@ -18,12 +18,8 @@ function getScore(P1point, P2point) {
   const diference =
     P1point - P2point > 0 ? P1point - P2point : P2point - P1point;
 
-  if (P1point === P2point) {
-    if (P1point < 3) {
-      score = scoreName(P1point) + "-All";
-    } else {
-      score = "Deuce";
-    }
+  if (diference === 0) {
+    score = P1point < 3 ? scoreName(P1point) + "-All" : "Deuce";
   }
 
   var P1res;
